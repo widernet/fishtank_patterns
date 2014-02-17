@@ -1,5 +1,5 @@
 FishtankPatterns::Application.routes.draw do
-  root 'pages#colors'
+  root 'pages#intro'
   get 'pages/colors'
   get 'pages/text'
   get 'pages/labels'

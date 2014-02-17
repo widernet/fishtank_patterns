@@ -11,6 +11,7 @@
 <div class="drawer">
   <nav>
     <ul class="nav-section">
+      <li><%= link_to 'Intro', root_path, class:('active' if current_page?(root_path)) %></li>
       <li><%= link_to 'Colors', pages_colors_path, class:('active' if current_page?(pages_colors_path)) %></li>
       <li><%= link_to 'Text', pages_text_path, class:('active' if current_page?(pages_text_path)) %></li>
       <li><%= link_to 'Labels', pages_labels_path, class:('active' if current_page?(pages_labels_path)) %></li>
