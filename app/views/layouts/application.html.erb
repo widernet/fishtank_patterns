@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FishtankPatterns</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>FishtankStyleguide</title>
+  <%= stylesheet_link_tag    "http://www.christianconnection.co.uk.dev/assets/mobile.css", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="drawer">
+  <nav>
+    <ul class="nav-section">
+      <li><%= link_to 'Colors', pages_colors_path, class:('active' if current_page?(pages_colors_path)) %></li>
+      <li><%= link_to 'Text', pages_text_path, class:('active' if current_page?(pages_text_path)) %></li>
+      <li><%= link_to 'Labels', pages_labels_path, class:('active' if current_page?(pages_labels_path)) %></li>
+      <li><%= link_to 'Text Fields', pages_text_fields_path, class:('active' if current_page?(pages_text_fields_path)) %></li>
+      <li><%= link_to 'Buttons', pages_buttons_path, class:('active' if current_page?(pages_buttons_path)) %></li>
+      <li><%= link_to 'Flashes & Bulletins', pages_flashes_path, class:('active' if current_page?(pages_flashes_path)) %></li>
+      <li><%= link_to 'Mail Items', pages_mail_items_path, class:('active' if current_page?(pages_mail_items_path)) %></li>
+      <li><%= link_to 'Messages', pages_messages_path, class:('active' if current_page?(pages_messages_path)) %></li>
+    </ul>
+  </nav>
+</div>
+
+<header class="drawer-butt app__hd">
+  <a href="#" class="nav-toggle"><span></span></a>  
+</header>
+
+<div class="drawer-butt drawer-butt--main">
+  <main class="app__bd">
+    <%= yield %>
+  </main>
+</div>
 
 </body>
 </html>
